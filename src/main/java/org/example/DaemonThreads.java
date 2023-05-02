@@ -1,3 +1,5 @@
+package org.example;
+
 /**
  Daemon threads are low prio threads that runs in the background such as garbage collector
  Usually it is created for I/O operations or services (e.g.: NFC, Bluetooth)

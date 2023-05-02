@@ -30,7 +30,7 @@ class Runner4 extends Thread {
         }
     }
 }
-public class ThreadPracticeWithIneritance {
+public class ThreadPracticeWithInheritance {
     public static void main(String[] args) throws InterruptedException {
         Thread t3 = new Runner3();
         Thread t4 = new Runner4();
@@ -40,6 +40,7 @@ public class ThreadPracticeWithIneritance {
 
         //We can wait for the thread to finish: join()
         //Waits for this thread to die.
+        //When we invoke the join() method on a thread, the calling thread goes into a waiting state. It remains in a waiting state until the referenced thread terminates.
         t3.join();
         t4.join();
 

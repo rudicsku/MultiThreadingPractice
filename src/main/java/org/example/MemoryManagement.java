@@ -1,3 +1,5 @@
+package org.example;
+
 /**
  * Every thread has its own stack memory, but all threads share the heap memory (shared memory space)
  */
@@ -6,12 +8,11 @@ public class MemoryManagement {
 
     public static int counter = 0;
 
-    //Inconsistent result
     public static void increment() {
         counter++;
     }
 
-    // We hae to make sure that this is only executed by a single thread at a given time
+    // with synchronised keyword, we make sure that this is only executed by a single thread at a given time
     public static synchronized void increment1() {
         counter++;
     }
@@ -19,7 +20,7 @@ public class MemoryManagement {
     //Synchronized block is used to lock an object for any shared resource. Refers to the object.
     public void increment2() {
         synchronized (this){
-            //counter++;
+            counter++;
             //Otherclasss.increment(); ?
         }
     }
